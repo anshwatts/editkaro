@@ -113,6 +113,7 @@ body {
 .category-btn:hover,
 .category-btn.active {
     background-color: var(--accent-color);
+    color: #FFFFFF;
 }
 
 .work-grid {
@@ -125,11 +126,13 @@ body {
     background-color: var(--surface-background);
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease;
+    opacity: 1;
 }
 
 .work-item:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .thumbnail {
@@ -153,6 +156,12 @@ body {
     font-weight: bold;
 }
 
+@media (max-width: 1024px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .main-heading {
         font-size: 2.5rem;
@@ -170,5 +179,6 @@ body {
 }
 
 .hidden {
+    opacity: 0 !important;
     display: none !important;
 }

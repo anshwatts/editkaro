@@ -85,6 +85,74 @@ body {
     opacity: 0.9;
 }
 
+.portfolio-section {
+    padding: 5rem 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background-color: var(--surface-background);
+    color: var(--main-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background-color: var(--accent-color);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.work-item {
+    background-color: var(--surface-background);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #2A2A2A;
+}
+
+.item-details {
+    padding: 1.5rem;
+}
+
+.video-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-tag {
+    font-size: 0.875rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .main-heading {
         font-size: 2.5rem;
@@ -95,5 +163,8 @@ body {
     .action-button {
         padding: 0.875rem 2rem;
         font-size: 1.1rem;
+    }
+    .work-grid {
+        grid-template-columns: 1fr;
     }
 }

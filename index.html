@@ -19,48 +19,48 @@
 
     <section class="portfolio-section">
         <div class="category-buttons">
-            <button class="category-btn active">All</button>
-            <button class="category-btn">Gaming</button>
-            <button class="category-btn">Ads</button>
-            <button class="category-btn">Anime</button>
+            <button class="category-btn active" data-filter="all">All</button>
+            <button class="category-btn" data-filter="gaming">Gaming</button>
+            <button class="category-btn" data-filter="ads">Ads</button>
+            <button class="category-btn" data-filter="anime">Anime</button>
         </div>
         <div class="work-grid">
-            <div class="work-item">
+            <div class="work-item" data-category="gaming">
                 <div class="thumbnail"></div>
                 <div class="item-details">
                     <h3 class="video-title">Epic Gaming Montage</h3>
                     <span class="category-tag">Gaming</span>
                 </div>
             </div>
-            <div class="work-item">
+            <div class="work-item" data-category="ads">
                 <div class="thumbnail"></div>
                 <div class="item-details">
                     <h3 class="video-title">Modern Sneaker Ad</h3>
                     <span class="category-tag">Ads</span>
                 </div>
             </div>
-            <div class="work-item">
+            <div class="work-item" data-category="anime">
                 <div class="thumbnail"></div>
                 <div class="item-details">
                     <h3 class="video-title">Anime Music Video</h3>
                     <span class="category-tag">Anime</span>
                 </div>
             </div>
-            <div class="work-item">
+            <div class="work-item" data-category="gaming">
                 <div class="thumbnail"></div>
                 <div class="item-details">
                     <h3 class="video-title">Valorant Highlights</h3>
                     <span class="category-tag">Gaming</span>
                 </div>
             </div>
-            <div class="work-item">
+            <div class="work-item" data-category="ads">
                 <div class="thumbnail"></div>
                 <div class="item-details">
                     <h3 class="video-title">Tech Product Promo</h3>
                     <span class="category-tag">Ads</span>
                 </div>
             </div>
-            <div class="work-item">
+            <div class="work-item" data-category="anime">
                 <div class="thumbnail"></div>
                 <div class="item-details">
                     <h3 class="video-title">Cinematic Anime Edit</h3>
@@ -69,5 +69,6 @@
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

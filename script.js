@@ -33,7 +33,7 @@ categoryButtons.forEach(button => {
 function openModal(event) {
     const videoUrl = event.target.getAttribute('data-video');
     if (videoUrl) {
-        modalContent.innerHTML = `<video src="${videoUrl}" controls autoplay></video>`;
+        modalContent.innerHTML = `<video src="${videoUrl}" controls autoplay muted playsinline></video>`;
         videoModal.classList.add('active');
     }
 }
@@ -53,3 +53,20 @@ if (videoModal && closeModal) {
     videoModal.addEventListener('click', closeVideoModal);
     closeModal.addEventListener('click', closeVideoModal);
 }
+
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        backToTopBtn.classList.add('show-button');
+    } else {
+        backToTopBtn.classList.remove('show-button');
+    }
+});
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

@@ -139,6 +139,7 @@ body {
     width: 100%;
     aspect-ratio: 16 / 9;
     background-color: #2A2A2A;
+    cursor: pointer;
 }
 
 .item-details {
@@ -181,4 +182,52 @@ body {
 .hidden {
     opacity: 0 !important;
     display: none !important;
+}
+
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 900px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #FFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--accent-color);
 }

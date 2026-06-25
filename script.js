@@ -4,6 +4,14 @@ const thumbnails = document.querySelectorAll('.thumbnail');
 const videoModal = document.getElementById('videoModal');
 const closeModal = document.getElementById('closeModal');
 const modalContent = document.getElementById('modalContent');
+const viewWorkBtn = document.querySelector('.action-button');
+const portfolioSection = document.querySelector('.portfolio-section');
+
+if (viewWorkBtn && portfolioSection) {
+    viewWorkBtn.addEventListener('click', () => {
+        portfolioSection.scrollIntoView();
+    });
+}
 
 function filterProjects(event) {
     const clickedButton = event.target;
@@ -68,5 +76,23 @@ backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
+    });
+});
+
+const customCursor = document.getElementById('custom-cursor');
+
+window.addEventListener('mousemove', (e) => {
+    customCursor.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+});
+
+const interactiveElements = document.querySelectorAll('button, a, .work-item');
+
+interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        customCursor.classList.add('cursor-grow');
+    });
+
+    el.addEventListener('mouseleave', () => {
+        customCursor.classList.remove('cursor-grow');
     });
 });

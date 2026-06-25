@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editkaro.in</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    
     <section class="hero-section">
-        <div class="video-container"></div>
-        <div class="dark-overlay"></div>
-        <div class="content-box">
+        <div class="hero-content">
             <h1 class="main-heading">Editkaro.in</h1>
-            <p class="subtitle">Elevating Visual Storytelling</p>
-            <button class="action-button">View Our Work</button>
+            <button class="action-button brutal-card">View Our Work</button>
+        </div>
+        <div class="hero-video brutal-card">
+            <video class="media-placeholder" autoplay loop muted></video>
         </div>
     </section>
 
     <section class="portfolio-section">
         <div class="category-buttons">
-            <button class="category-btn active" data-filter="all">All</button>
-            <button class="category-btn" data-filter="gaming">Gaming</button>
-            <button class="category-btn" data-filter="ads">Ads</button>
-            <button class="category-btn" data-filter="anime">Anime</button>
+            <button class="category-btn brutal-card active" data-filter="all">All</button>
+            <button class="category-btn brutal-card" data-filter="gaming">Gaming</button>
+            <button class="category-btn brutal-card" data-filter="ads">Ads</button>
+            <button class="category-btn brutal-card" data-filter="anime">Anime</button>
         </div>
         <div class="work-grid">
-            <div class="work-item" data-category="gaming">
-                <div class="thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+            <div class="work-item brutal-card" data-category="gaming">
+                <video class="media-placeholder thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted></video>
                 <div class="item-details">
                     <h3 class="video-title">Epic Gaming Montage</h3>
                     <span class="category-tag">Gaming</span>
                 </div>
             </div>
-            <div class="work-item" data-category="ads">
-                <div class="thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+            <div class="work-item brutal-card" data-category="ads">
+                <video class="media-placeholder thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted></video>
                 <div class="item-details">
                     <h3 class="video-title">Modern Sneaker Ad</h3>
                     <span class="category-tag">Ads</span>
                 </div>
             </div>
-            <div class="work-item" data-category="anime">
-                <div class="thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+            <div class="work-item brutal-card" data-category="anime">
+                <video class="media-placeholder thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted></video>
                 <div class="item-details">
                     <h3 class="video-title">Anime Music Video</h3>
                     <span class="category-tag">Anime</span>
                 </div>
             </div>
-            <div class="work-item" data-category="gaming">
-                <div class="thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+            <div class="work-item brutal-card" data-category="gaming">
+                <video class="media-placeholder thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted></video>
                 <div class="item-details">
                     <h3 class="video-title">Valorant Highlights</h3>
                     <span class="category-tag">Gaming</span>
                 </div>
             </div>
-            <div class="work-item" data-category="ads">
-                <div class="thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+            <div class="work-item brutal-card" data-category="ads">
+                <video class="media-placeholder thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted></video>
                 <div class="item-details">
                     <h3 class="video-title">Tech Product Promo</h3>
                     <span class="category-tag">Ads</span>
                 </div>
             </div>
-            <div class="work-item" data-category="anime">
-                <div class="thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></div>
+            <div class="work-item brutal-card" data-category="anime">
+                <video class="media-placeholder thumbnail" data-video="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted></video>
                 <div class="item-details">
                     <h3 class="video-title">Cinematic Anime Edit</h3>
                     <span class="category-tag">Anime</span>
@@ -95,7 +98,9 @@
     </footer>
 
     <button id="back-to-top">&uarr;</button>
+    <div id="custom-cursor"></div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

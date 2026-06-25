@@ -212,6 +212,8 @@ body {
     padding: 1.5rem 3rem;
     font-size: 1.5rem;
     font-weight: 900;
+    text-decoration: none;
+    display: inline-block;
     cursor: none !important;
 }
 
@@ -659,7 +661,7 @@ body {
 
     .main-heading {
         font-size: 2.2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .slider-container {
@@ -1075,5 +1077,25 @@ body {
 
     .team-grid {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .category-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        padding: 0 5%;
+        width: 100%;
+    }
+
+    .category-btn {
+        padding: 0.85rem 0.5rem;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 0px var(--brutal-border);
+    }
+
+    .action-button {
+        margin-top: 0.75rem;
     }
 }

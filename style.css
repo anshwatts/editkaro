@@ -1099,4 +1099,15 @@ body {
     .action-button {
         margin-top: 0.25rem;
     }
+
+    html, body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+        display: none !important;
+        width: 0px !important;
+    }
 }

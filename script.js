@@ -133,3 +133,24 @@ interactiveElements.forEach(el => {
         customCursor.classList.remove('cursor-grow');
     });
 });
+
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileOverlay = document.getElementById('mobile-overlay');
+const closeOverlayBtn = document.getElementById('close-overlay-btn');
+const overlayLinks = document.querySelectorAll('.overlay-link');
+
+if (mobileMenuBtn && mobileOverlay && closeOverlayBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileOverlay.classList.add('open');
+    });
+
+    closeOverlayBtn.addEventListener('click', () => {
+        mobileOverlay.classList.remove('open');
+    });
+
+    overlayLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileOverlay.classList.remove('open');
+        });
+    });
+}

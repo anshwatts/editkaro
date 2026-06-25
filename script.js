@@ -41,7 +41,7 @@ categoryButtons.forEach(button => {
 function openModal(event) {
     const videoUrl = event.target.getAttribute('data-video');
     if (videoUrl) {
-        modalContent.innerHTML = `<video src="${videoUrl}" controls autoplay muted playsinline></video>`;
+        modalContent.innerHTML = `<iframe width="100%" height="100%" src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio: 16/9;"></iframe>`;
         videoModal.classList.add('active');
     }
 }

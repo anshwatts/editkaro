@@ -143,15 +143,18 @@ const overlayLinks = document.querySelectorAll('.overlay-link');
 if (mobileMenuBtn && mobileOverlay && closeOverlayBtn) {
     mobileMenuBtn.addEventListener('click', () => {
         mobileOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
     });
 
     closeOverlayBtn.addEventListener('click', () => {
         mobileOverlay.classList.remove('open');
+        document.body.style.overflow = '';
     });
 
     overlayLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileOverlay.classList.remove('open');
+            document.body.style.overflow = '';
         });
     });
 }

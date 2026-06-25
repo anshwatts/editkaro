@@ -487,9 +487,13 @@ body {
         inset: 0;
         z-index: 9999999;
         background-color: #FAFAFA;
+        background-image: radial-gradient(#000 15%, transparent 15%);
+        background-size: 16px 16px;
         flex-direction: column;
+        justify-content: flex-start;
         transform: translateX(100%);
-        transition: transform 0.2s ease-out;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
     }
 
     #mobile-overlay.open {
@@ -499,28 +503,40 @@ body {
     .overlay-header {
         width: 100%;
         border-bottom: 4px solid #000;
-        background-color: #FF4B4B;
+        background-color: #E3FF00;
+        box-shadow: 0px 6px 0px #000;
         display: flex;
         justify-content: flex-end;
-        padding: 1.5rem;
+        align-items: center;
+        padding: 1.25rem 1.5rem;
+        z-index: 10;
     }
 
     #close-overlay-btn {
-        background: none;
-        border: none;
-        color: #000;
+        background-color: #FF4B4B;
+        border: 3px solid #000;
+        box-shadow: 4px 4px 0px #000;
+        color: #FAFAFA;
         font-weight: 900;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-family: inherit;
         cursor: pointer;
-        padding: 0;
+        padding: 0.5rem 1rem;
+        transition: all 0.1s ease;
+    }
+
+    #close-overlay-btn:active {
+        transform: translate(4px, 4px);
+        box-shadow: 0px 0px 0px #000;
     }
 
     .overlay-links {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 0;
+        padding: 1.5rem;
+        gap: 1.25rem;
+        margin-top: 0.5rem;
     }
 
     .overlay-link {
@@ -528,21 +544,43 @@ body {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 2rem 1.5rem;
-        border-bottom: 4px solid #000;
+        padding: 1.25rem 1.5rem;
+        border: 4px solid #000;
+        border-radius: 0px;
+        box-shadow: 6px 6px 0px #000;
         text-decoration: none;
         color: #000;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 900;
+        letter-spacing: 1px;
         text-transform: uppercase;
         background-color: #FAFAFA;
-        transition: none;
-        -webkit-text-stroke: 0;
+        transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
     }
 
-    .overlay-link:hover,
+    .overlay-link:nth-child(1) { background-color: #FAFAFA; }
+    .overlay-link:nth-child(2) { background-color: #E3FF00; }
+    .overlay-link:nth-child(3) { background-color: #FF4B4B; color: #FAFAFA; }
+    .overlay-link:nth-child(4) { background-color: #FAFAFA; }
+
+    .overlay-link span:last-child {
+        background-color: #000;
+        color: #E3FF00;
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        border: 2px solid #000;
+    }
+
+    .overlay-link:nth-child(3) span:last-child {
+        background-color: #FAFAFA;
+        color: #000;
+    }
+
     .overlay-link:active {
+        transform: translate(6px, 6px);
+        box-shadow: 0px 0px 0px #000;
         background-color: #E3FF00;
+        color: #000;
     }
 
     .hero-section {
@@ -1111,13 +1149,23 @@ body {
     }
 
     html, body {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
         overflow-x: hidden;
     }
 
     ::-webkit-scrollbar {
-        display: none !important;
-        width: 0px !important;
+        width: 6px !important;
+        display: block !important;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #FAFAFA !important;
+        background-image: none !important;
+        border-left: 2px solid #000 !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #FF4B4B !important;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
     }
 }

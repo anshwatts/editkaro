@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro.in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="site-navbar">
+        <a class="brand-logo" href="index.html">Editkaro.in</a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+            <li><a class="nav-link" href="about.html">About Us</a></li>
+            <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="portfolio-section">
+        <div class="category-buttons">
+            <button class="category-btn brutal-card active" data-filter="all">All</button>
+            <button class="category-btn brutal-card" data-filter="gaming">Gaming</button>
+            <button class="category-btn brutal-card" data-filter="ads">Ads</button>
+            <button class="category-btn brutal-card" data-filter="anime">Anime</button>
+        </div>
+        <div class="work-grid">
+            <div class="work-item brutal-card" data-category="gaming">
+                <img class="media-placeholder thumbnail" src="https://img.youtube.com/vi/kBUir84CjHQ/maxresdefault.jpg"
+                    data-video="https://www.youtube.com/embed/kBUir84CjHQ?autoplay=1" alt="Epic Gaming Montage">
+                <div class="item-details">
+                    <h3 class="video-title">Epic Gaming Montage</h3>
+                    <span class="category-tag">Gaming</span>
+                </div>
+            </div>
+            <div class="work-item brutal-card" data-category="ads">
+                <img class="media-placeholder thumbnail" src="https://img.youtube.com/vi/oD4PVOIzTQg/maxresdefault.jpg"
+                    data-video="https://www.youtube.com/embed/oD4PVOIzTQg?autoplay=1" alt="Modern Sneaker Ad">
+                <div class="item-details">
+                    <h3 class="video-title">Modern Sneaker Ad</h3>
+                    <span class="category-tag">Ads</span>
+                </div>
+            </div>
+            <div class="work-item brutal-card" data-category="anime">
+                <img class="media-placeholder thumbnail" src="https://img.youtube.com/vi/SZZqTMDE3Rg/maxresdefault.jpg"
+                    data-video="https://www.youtube.com/embed/SZZqTMDE3Rg?autoplay=1" alt="Anime Music Video">
+                <div class="item-details">
+                    <h3 class="video-title">Anime Music Video</h3>
+                    <span class="category-tag">Anime</span>
+                </div>
+            </div>
+            <div class="work-item brutal-card" data-category="gaming">
+                <img class="media-placeholder thumbnail" src="https://img.youtube.com/vi/qID7Avs8cJo/maxresdefault.jpg"
+                    data-video="https://www.youtube.com/embed/qID7Avs8cJo?autoplay=1" alt="Valorant Highlights">
+                <div class="item-details">
+                    <h3 class="video-title">Valorant Highlights</h3>
+                    <span class="category-tag">Gaming</span>
+                </div>
+            </div>
+            <div class="work-item brutal-card" data-category="ads">
+                <img class="media-placeholder thumbnail" src="https://img.youtube.com/vi/_-AS5DtDeqs/maxresdefault.jpg"
+                    data-video="https://www.youtube.com/embed/_-AS5DtDeqs?autoplay=1" alt="Tech Product Promo">
+                <div class="item-details">
+                    <h3 class="video-title">Tech Product Promo</h3>
+                    <span class="category-tag">Ads</span>
+                </div>
+            </div>
+            <div class="work-item brutal-card" data-category="anime">
+                <img class="media-placeholder thumbnail" src="https://img.youtube.com/vi/lm47T73ARgI/maxresdefault.jpg"
+                    data-video="https://www.youtube.com/embed/lm47T73ARgI?autoplay=1" alt="Cinematic Anime Edit">
+                <div class="item-details">
+                    <h3 class="video-title">Cinematic Anime Edit</h3>
+                    <span class="category-tag">Anime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="video-modal" id="videoModal">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Editkaro.in</h3>
+                <p>Elevating Visual Storytelling.</p>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <a href="mailto:hello@editkaro.in">hello@editkaro.in</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top">&uarr;</button>
+    <div id="custom-cursor"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro.in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="site-navbar">
+        <a class="brand-logo" href="index.html">Editkaro.in</a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li><a class="nav-link" href="about.html">About Us</a></li>
+            <li><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section" style="min-height: 70vh;">
+        <div class="hero-content" style="max-width: 600px; margin: 0 auto; width: 100%;">
+            <h1 class="main-heading">Contact Us</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; text-align: center;">Ready to start your next video project? Let's talk.</p>
+            <form style="display: flex; flex-direction: column; gap: 15px; width: 100%; text-align: left;" onsubmit="event.preventDefault(); alert('Message Sent!');">
+                <input class="brutal-card" type="text" placeholder="YOUR NAME" required style="padding: 15px; font-size: 1rem; font-family: inherit; font-weight: bold; width: 100%;">
+                <input class="brutal-card" type="email" placeholder="YOUR EMAIL" required style="padding: 15px; font-size: 1rem; font-family: inherit; font-weight: bold; width: 100%;">
+                <textarea class="brutal-card" rows="5" placeholder="PROJECT DETAILS" required style="padding: 15px; font-size: 1rem; font-family: inherit; font-weight: bold; width: 100%; resize: vertical;"></textarea>
+                <button class="action-button brutal-card" type="submit" style="background: var(--primary-accent); cursor: pointer;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Editkaro.in</h3>
+                <p>Elevating Visual Storytelling.</p>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <a href="mailto:hello@editkaro.in">hello@editkaro.in</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top">&uarr;</button>
+    <div id="custom-cursor"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

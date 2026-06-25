@@ -66,7 +66,8 @@
                 <h2 class="newsletter-title">Join Our VIP Newsletter</h2>
                 <p class="newsletter-subtitle">Get weekly editing breakdowns and viral marketing insights directly to your inbox.</p>
                 <form id="email-form" class="email-collector">
-                    <input class="email-input" type="email" placeholder="ENTER YOUR EMAIL HERE..." required>
+                    <input type="hidden" name="formType" value="newsletter">
+                    <input class="email-input" type="email" name="email" placeholder="ENTER YOUR EMAIL HERE..." required>
                     <button class="submit-button brutal-btn" type="submit">Subscribe</button>
                 </form>
             </div>
@@ -98,13 +99,15 @@
     <div id="custom-cursor"></div>
 
     <div id="mobile-overlay">
-        <button id="close-overlay-btn">CLOSE</button>
-        <div class="overlay-links">
-            <a class="overlay-link" href="index.html">Home</a>
-            <a class="overlay-link" href="portfolio.html">Portfolio</a>
-            <a class="overlay-link" href="about.html">About Us</a>
-            <a class="overlay-link" href="contact.html">Contact Us</a>
+        <div class="overlay-header">
+            <button id="close-overlay-btn">CLOSE [ X ]</button>
         </div>
+        <nav class="overlay-links">
+            <a class="overlay-link" href="index.html"><span>HOME</span><span>-&gt;</span></a>
+            <a class="overlay-link" href="portfolio.html"><span>PORTFOLIO</span><span>-&gt;</span></a>
+            <a class="overlay-link" href="about.html"><span>ABOUT US</span><span>-&gt;</span></a>
+            <a class="overlay-link" href="contact.html"><span>CONTACT US</span><span>-&gt;</span></a>
+        </nav>
     </div>
 
     <script src="script.js"></script>

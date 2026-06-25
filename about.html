@@ -20,24 +20,60 @@
         <button id="mobile-menu-btn">MENU</button>
     </nav>
 
-    <section class="hero-section" style="min-height: 60vh;">
-        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h1 class="main-heading">About Us</h1>
-            <p style="font-size: 1.5rem; line-height: 1.6; margin-bottom: 2rem; font-weight: bold;">
-                We are Editkaro.in — an expert collective of video editors, motion designers, and visual storytellers dedicated to making your brand unignorable.
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 100%;">
-                <div class="brutal-card" style="padding: 20px; background: var(--primary-accent);">
-                    <h2 style="font-size: 2.5rem;">100+</h2>
-                    <p>Projects Delivered</p>
+    <main class="layout-wrapper">
+        <section class="about-hero-section">
+            <h1 class="massive-title">OUR MISSION</h1>
+            <p class="about-lead">We exist to kill boring content. In a world of 3-second attention spans, we forge high-retention visual assets that dominate algorithms.</p>
+        </section>
+
+        <section class="pillars-section">
+            <h2 class="section-heading">Value Pillars</h2>
+            <div class="pillars-row">
+                <div class="value-pillar brutal-card pillar-yellow">
+                    <span class="pillar-number">01</span>
+                    <h3 class="pillar-title">Hyper-Retention Logic</h3>
+                    <p class="pillar-text">Every cut, sound effect, and graphic transition is mathematically mapped to keep viewers hooked until the final frame.</p>
                 </div>
-                <div class="brutal-card" style="padding: 20px; background: var(--secondary-accent); color: #FFF;">
-                    <h2 style="font-size: 2.5rem;">50M+</h2>
-                    <p>Views Generated</p>
+                <div class="value-pillar brutal-card pillar-red">
+                    <span class="pillar-number">02</span>
+                    <h3 class="pillar-title">Platform Native Design</h3>
+                    <p class="pillar-text">We do not recycle templates. We engineer tailored vertical and horizontal edits specifically designed for Shorts, Reels, and YouTube.</p>
+                </div>
+                <div class="value-pillar brutal-card pillar-white">
+                    <span class="pillar-number">03</span>
+                    <h3 class="pillar-title">Speed & Precision</h3>
+                    <p class="pillar-text">Viral trends move overnight. Our decentralized post-production workflow ensures lightning turnaround without quality drop.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="team-section">
+            <h2 class="section-heading">Meet The Team</h2>
+            <div class="team-grid">
+                <div class="team-card brutal-card">
+                    <img class="member-image" src="221.jpg" alt="Ansh Watts">
+                    <div class="member-info">
+                        <h3 class="member-name">Ansh Watts</h3>
+                        <p class="member-role">Founder & Lead Editor</p>
+                    </div>
+                </div>
+                <div class="team-card brutal-card">
+                    <img class="member-image" src="222.jpg" alt="Rohan Sharma">
+                    <div class="member-info">
+                        <h3 class="member-name">Rohan Sharma</h3>
+                        <p class="member-role">Senior Motion Designer</p>
+                    </div>
+                </div>
+                <div class="team-card brutal-card">
+                    <img class="member-image" src="223.jpg" alt="Priya Patel">
+                    <div class="member-info">
+                        <h3 class="member-name">Priya Patel</h3>
+                        <p class="member-role">Creative Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-columns">
@@ -62,13 +98,15 @@
     <div id="custom-cursor"></div>
 
     <div id="mobile-overlay">
-        <button id="close-overlay-btn">CLOSE</button>
-        <div class="overlay-links">
-            <a class="overlay-link" href="index.html">Home</a>
-            <a class="overlay-link" href="portfolio.html">Portfolio</a>
-            <a class="overlay-link" href="about.html">About Us</a>
-            <a class="overlay-link" href="contact.html">Contact Us</a>
+        <div class="overlay-header">
+            <button id="close-overlay-btn">CLOSE [ X ]</button>
         </div>
+        <nav class="overlay-links">
+            <a class="overlay-link" href="index.html"><span>HOME</span><span>-&gt;</span></a>
+            <a class="overlay-link" href="portfolio.html"><span>PORTFOLIO</span><span>-&gt;</span></a>
+            <a class="overlay-link" href="about.html"><span>ABOUT US</span><span>-&gt;</span></a>
+            <a class="overlay-link" href="contact.html"><span>CONTACT US</span><span>-&gt;</span></a>
+        </nav>
     </div>
 
     <script src="script.js"></script>

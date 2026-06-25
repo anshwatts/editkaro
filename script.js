@@ -1,3 +1,4 @@
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjyHw9P64k2-0i8idYr8b0X8Cn9XcuUXoDdCijssXvEriK8JaPZLt4vdXLe5ISCjdPwQ/exec';
 const categoryButtons = document.querySelectorAll('.category-btn');
 const portfolioItems = document.querySelectorAll('.work-item');
 const thumbnails = document.querySelectorAll('.thumbnail');
@@ -151,6 +152,97 @@ if (mobileMenuBtn && mobileOverlay && closeOverlayBtn) {
     overlayLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileOverlay.classList.remove('open');
+        });
+    });
+}
+
+const emailForm = document.getElementById('email-form');
+
+if (emailForm) {
+    emailForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = emailForm.querySelector('.submit-button');
+        const emailInputField = emailForm.querySelector('.email-input');
+        const capturedFormData = new FormData(emailForm);
+
+        if (submitBtn) {
+            submitBtn.innerText = 'SAVING...';
+            submitBtn.disabled = true;
+        }
+
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: capturedFormData,
+            mode: 'no-cors'
+        })
+        .then(() => {
+            if (submitBtn) {
+                submitBtn.innerText = 'DONE!';
+                submitBtn.disabled = false;
+            }
+            if (emailInputField) {
+                emailInputField.value = '';
+            }
+        })
+        .catch(error => {
+            if (submitBtn) {
+                submitBtn.innerText = 'ERROR!';
+                submitBtn.disabled = false;
+            }
+        });
+    });
+}
+
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('contact-submit-btn');
+        const requiredInputs = contactForm.querySelectorAll('[required]');
+        let isFormValid = true;
+
+        requiredInputs.forEach(input => {
+            input.classList.remove('input-error');
+            const inputValue = input.value.trim();
+
+            if (!inputValue) {
+                isFormValid = false;
+                input.classList.add('input-error');
+            } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputValue)) {
+                isFormValid = false;
+                input.classList.add('input-error');
+            }
+        });
+
+        if (!isFormValid) {
+            return;
+        }
+
+        if (submitBtn) {
+            submitBtn.innerText = 'SENDING...';
+            submitBtn.disabled = true;
+        }
+
+        const contactFormData = new FormData(contactForm);
+
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: contactFormData,
+            mode: 'no-cors'
+        })
+        .then(() => {
+            if (submitBtn) {
+                submitBtn.innerText = 'MESSAGE SENT!';
+                submitBtn.disabled = true;
+            }
+            contactForm.reset();
+        })
+        .catch(() => {
+            if (submitBtn) {
+                submitBtn.innerText = 'ERROR!';
+                submitBtn.disabled = false;
+            }
         });
     });
 }

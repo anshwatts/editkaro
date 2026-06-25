@@ -13,6 +13,43 @@ if (viewWorkBtn && portfolioSection) {
     });
 }
 
+const slideTrack = document.querySelector('.slide-track');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentSlide = 0;
+
+if (slideTrack && slides.length > 0 && prevBtn && nextBtn) {
+    let slideTimer;
+
+    function updateSliderPosition() {
+        slideTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSliderPosition();
+    }
+
+    function startAutoSlide() {
+        clearInterval(slideTimer);
+        slideTimer = setInterval(nextSlide, 3500);
+    }
+
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSliderPosition();
+        startAutoSlide();
+    });
+
+    startAutoSlide();
+}
+
 function filterProjects(event) {
     const clickedButton = event.target;
     const filterValue = clickedButton.getAttribute('data-filter');

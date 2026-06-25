@@ -116,7 +116,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 2.5rem 5% 5rem 5%;
+    padding: 1rem 5% 4rem 5%;
     gap: 40px;
     background-color: var(--main-background);
     border-bottom: 3px solid var(--brutal-border);
@@ -201,6 +201,7 @@ body {
 .main-heading {
     font-size: 6rem;
     font-weight: 900;
+    margin-top: 0;
     margin-bottom: 1rem;
     line-height: 1;
     color: var(--brutal-border);
@@ -655,7 +656,7 @@ body {
 
 
     .hero-section {
-        padding: 1.25rem 15px 2rem;
+        padding: 0.5rem 15px 1.5rem;
         gap: 1rem;
     }
 

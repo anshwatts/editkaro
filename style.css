@@ -114,9 +114,9 @@ body {
 .hero-section {
     min-height: calc(100vh - 80px);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 3rem 5% 7rem 5%;
+    padding: 2.5rem 5% 5rem 5%;
     gap: 40px;
     background-color: var(--main-background);
     border-bottom: 3px solid var(--brutal-border);
@@ -655,7 +655,7 @@ body {
 
 
     .hero-section {
-        padding: 2rem 15px;
+        padding: 1.25rem 15px 2rem;
         gap: 1rem;
     }
 

@@ -287,8 +287,8 @@ body {
         justify-content: center;
         height: auto;
         min-height: 100vh;
-        padding: 4rem 20px;
-        gap: 2.5rem;
+        padding: 2.5rem 15px;
+        gap: 1.25rem;
     }
 
     .hero-content {
@@ -298,17 +298,34 @@ body {
     }
 
     .main-heading {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+        margin-bottom: 0.75rem;
     }
 
     .hero-slider-wrapper {
         width: 100%;
     }
 
+    .slider-container {
+        aspect-ratio: 4 / 5;
+        max-height: 520px;
+    }
+
+    .slider-controls {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .prev-btn, .next-btn {
+        flex: 1;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+    }
+
     .action-button {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
+        padding: 0.875rem 2rem;
+        font-size: 1.1rem;
         width: 100%;
         max-width: 300px;
     }
@@ -318,12 +335,15 @@ body {
     }
 
     .category-buttons {
-        gap: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
         margin-bottom: 2rem;
     }
 
     .category-btn {
-        padding: 0.6rem 1.2rem;
+        padding: 0.6rem 1.25rem;
         font-size: 0.95rem;
     }
 
@@ -334,6 +354,33 @@ body {
 
     .item-details {
         padding: 1.5rem;
+    }
+
+    .close-modal {
+        top: 15px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 15px;
+        gap: 1rem;
+    }
+
+    .main-heading {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .slider-container {
+        aspect-ratio: 3 / 4;
+        max-height: 450px;
+    }
+
+    .video-title {
+        font-size: 1.25rem;
     }
 }
 
